@@ -31,7 +31,7 @@ const generate = () => {
                 <li> <b>It's Just JavaScript</b>: It's nothing more than simple JavaScript in the end, just makes everything a little easier. </li>
                 <li> <b>Small</b>: Is only ${Math.random() * 1000}kb!</li>
                 <li> <b>Intuitive virtual DOM</b>: The virtual DOM is in ${format} format, so you don't need to learn a whole new kind of DSL! </li>
-                <li> <b>Fast</b>: Updating a branch of ${Math.floor(Math.random() * 1000)} children only takes ${Math.floor(Math.random() * 100)} milliseconds.
+                <li> <b>Fast</b>: Updating a branch of ${Math.floor(Math.random() * 1000)} children only takes ${Math.floor(Math.random() * 100)} milliseconds. </li>
             </ul>
             <br>
             <br>
