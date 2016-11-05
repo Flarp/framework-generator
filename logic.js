@@ -16,7 +16,8 @@ const generate = () => {
             const licenses = ['MIT', 'BSD', 'GPL-3.0', 'MPL', 'Apache-2.0', 'GPL-3.0']
             console.log(noun)
             const data = ['JSON', 'XML']
-            const final = `<center><h1>${noun}</h1></center>
+            const format = getRandom(data)
+            const final = `<h1>${noun}</h1>
             <br>
             \t<p>${noun} is a new ${getRandom(language)} MVC framework inspired by ${getRandom(based)}. This new library can be got from npm using - </p>
             <br>
@@ -28,15 +29,16 @@ const generate = () => {
             <ul>
                 <li> <b>${getRandom(type)}</b>: Syntax recognized by many programmers makes it much easier to use, as many people are familiar with this kind of programming.</li>
                 <li> <b>It's Just JavaScript</b>: It's nothing more than simple JavaScript in the end, just makes everything a little easier. </li>
-                <li> <b>Small</b>: Is only ${Math.floor(Math.random() * 1000)}kb!</li>
-                <li> <b>Useful DOM</b>: The DOM is in ${getRandom(data)} format, so you don't need to learn a whole new kind of DSL! </li>
+                <li> <b>Small</b>: Is only ${Math.random() * 1000}kb!</li>
+                <li> <b>Intuitive virtual DOM</b>: The virtual DOM is in ${format} format, so you don't need to learn a whole new kind of DSL! </li>
+                <li> <b>Fast</b>: Updating a branch of ${Math.floor(Math.random() * 1000)} children only takes ${Math.floor(Math.random() * 100)} milliseconds.
             </ul>
             <br>
             <br>
             <h2>Example</h2>
             <code>
             <pre>
-            ${getRandom(data) === 'XML' 
+            ${format === 'XML' 
                 ? `<script>
                     var myArr = ["${noun} is cool!", "HTML5 is cooler!"]
                 </script>
@@ -77,9 +79,16 @@ const generate = () => {
             </pre>
             </code>
             <br>
+            <br>
+            <br>
             <h2>License</h2>
             <br>
             <p>This program is licensed under the ${getRandom(licenses)} license.</p> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <button onclick='generate()' class='btn btn-success'>Generate another framework</button>
             `
             document.getElementById('result').innerHTML = final;
         })
